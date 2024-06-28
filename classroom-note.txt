@@ -64,4 +64,5 @@ crc config set disk-size 40Gb
 memory 16GB
 
 https://test-php-teo-proj.apps.cluster.kel-ocp.com/
+http://myapp-teo-webproj.apps.cluster.kel-ocp.com/index.php
 
