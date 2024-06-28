@@ -9,3 +9,58 @@ spec:
   containers:
   - image: quay.io/kelvinlai/myweb:openshift
     name: mycontainer
+
+Started the OpenShift cluster.
+
+The server is accessible via web console at:
+  https://console-openshift-console.apps-crc.testing
+https://console-openshift-console.apps.cluster.kel-ocp.com/
+Log in as administrator:
+  Username: kubeadmin
+  Password: sMRko-BJsQt-AxJ9H-UcuJY
+
+Log in as user:
+  Username: developer
+  Password: developer
+
+Load Balance configure to 3 master by Network Team
+api.ocp.example.com:6443
+api.<clustername>.<base-domain-name.com>:portnum(default 6443)
+
+Wildcard DNS
+*.apps.ocp.example.com
+
+& crc oc-env | Invoke-Expression
+crc start
+
+oc login -u developer https://api.crc.testing:6443
+https://github.com/kelvinlnx/test-php
+
+api.cluster.kel-ocp.com
+
+The server is accessible via web console at:
+  https://console-openshift-console.apps-crc.testing
+
+Log in as administrator:
+  Username: kubeadmin
+  Password: sMRko-BJsQt-AxJ9H-UcuJY
+
+Log in as user:
+  Username: developer
+  Password: developer
+
+Use the 'oc' command line interface:
+  PS> & crc oc-env | Invoke-Expression
+  PS> oc login -u developer https://api.crc.testing:6443
+
+
+apps.
+
+svc-name.proj-name.svc.cluster.local
+
+oc expose svc svc/myweb --name abcroute --hostname abc.def.ghi
+
+crc config set disk-size 40Gb
+memory 16GB
+
+
