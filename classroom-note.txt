@@ -1,3 +1,4 @@
+
 class room note
 apiVersion: v1
 kind: Pod
@@ -70,4 +71,20 @@ disk-size : 35
 PS C:\Users\student> crc config get memory
 memory : 16384
 PS C:\Users\student> crc start
+
+
+
+
+You have access to the following projects and can switch between them with 'oc project <projectname>':
+
+    teo-dbproj
+    teo-proj
+  * teo-testing
+    teo-webproj
+
+Using project "teo-testing".
+PS C:\Users\Trainocate> oc project teo-dbproj
+Now using project "teo-dbproj" on server "https://api.cluster.kel-ocp.com:6443".
+PS C:\Users\Trainocate> oc create -f denyall.yaml -n teo-dbproj
+networkpolicy.networking.k8s.io/deny-all created
 
