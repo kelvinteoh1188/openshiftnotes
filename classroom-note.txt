@@ -65,4 +65,9 @@ memory 16GB
 
 https://test-php-teo-proj.apps.cluster.kel-ocp.com/
 http://myapp-teo-webproj.apps.cluster.kel-ocp.com/index.php
+PS C:\Users\student> crc config get disk-size
+disk-size : 35
+PS C:\Users\student> crc config get memory
+memory : 16384
+PS C:\Users\student> crc start
 
